@@ -14,6 +14,7 @@ public class MainApplication extends Application {
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(MainApplication.class.getResource("main-gym-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
+        //scene.getStylesheets().add(BootstrapFX.bootstrapFXStyleSheet());
         stage.setScene(scene);
         stage.show();
     }

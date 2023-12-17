@@ -15,7 +15,7 @@
       <Label layoutX="60.0" layoutY="167.0" prefHeight="16.0" prefWidth="106.0" text="Usuario" />
       <Label layoutX="58.0" layoutY="234.0" prefHeight="16.0" prefWidth="106.0" text="Contraseña" />
       <TextField fx:id="usernameTextField" layoutX="58.0" layoutY="188.0" prefHeight="24.0" prefWidth="253.0" />
-      <Label fx:id="labelRegister" layoutX="96.0" layoutY="348.0" prefHeight="16.0" prefWidth="182.0" text="¿Eres nuevo? ¡Registrate!" />
+      <Label fx:id="labelRegister" layoutX="96.0" layoutY="348.0" onMouseClicked="#toRegisterView" prefHeight="16.0" prefWidth="182.0" text="¿Eres nuevo? ¡Registrate!" />
       <Button fx:id="buttonLogin" layoutX="135.0" layoutY="307.0" mnemonicParsing="false" onAction="#login" text="Iniciar sesion" />
       <PasswordField fx:id="passwordTextField" layoutX="58.0" layoutY="256.0" prefHeight="24.0" prefWidth="253.0" />
    </children>

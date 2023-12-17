@@ -10,7 +10,7 @@
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="panel-primary" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.proyecto.proyectogymscenebuilder.controller.MainController">
    <children>
       <Button fx:id="instalacionesId" layoutX="51.0" layoutY="95.0" mnemonicParsing="false" onAction="#changeToInstalacionesView" prefHeight="105.0" prefWidth="203.0" text="Instalaciones" />
-      <Button layoutX="338.0" layoutY="89.0" mnemonicParsing="false" prefHeight="105.0" prefWidth="203.0" text="Tarifas" />
+      <Button fx:id="tarifasId" layoutX="338.0" layoutY="89.0" mnemonicParsing="false" onAction="#changeToTarifasView" prefHeight="105.0" prefWidth="203.0" text="Tarifas" />
       <Button fx:id="productsId" layoutX="51.0" layoutY="226.0" mnemonicParsing="false" onAction="#changeToProductsView" prefHeight="105.0" prefWidth="203.0" text="Productos" />
       <Button layoutX="338.0" layoutY="226.0" mnemonicParsing="false" prefHeight="105.0" prefWidth="203.0" text="Usuario" />
       <Button fx:id="buttonUser" layoutX="338.0" layoutY="226.0" mnemonicParsing="false" onAction="#changeToLoginView" prefHeight="105.0" prefWidth="203.0" text="Usuario" />

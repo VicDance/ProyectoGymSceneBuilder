@@ -21,6 +21,14 @@ public class MainController {
     @FXML
     private ImageView imageMultiestacion;
     @FXML
+    private ImageView imageTarifa1;
+    @FXML
+    private ImageView imageTarifa3;
+    @FXML
+    private ImageView imageTarifa6;
+    @FXML
+    private ImageView imageTarifa12;
+    @FXML
     private ImageView imageViewInstalacionPrincipal;
     @FXML
     private ImageView imageViewInstalacionCardio;
@@ -38,6 +46,18 @@ public class MainController {
     }
     public void setImageBici(Image image) {
         imageBici.setImage(image);
+    }
+    public void setImageTarifa1(Image image) {
+        imageTarifa1.setImage(image);
+    }
+    public void setImageTarifa3(Image image) {
+        imageTarifa3.setImage(image);
+    }
+    public void setImageTarifa6(Image image) {
+        imageTarifa6.setImage(image);
+    }
+    public void setImageTarifa12(Image image) {
+        imageTarifa12.setImage(image);
     }
     public void setImageMultiestacion(Image image) {
         imageMultiestacion.setImage(image);
@@ -94,6 +114,28 @@ public class MainController {
         controller.setImageImageViewInstalacionPiscina(imagePiscina);
         Image imageVestuario = new Image("file:src/main/resources/images/vestuarios.png");
         controller.setImageImageViewInstalacionVestuario(imageVestuario);
+
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    @FXML
+    protected void changeToTarifasView() throws IOException {
+        Stage stage = new Stage();
+        FXMLLoader fxmlLoader = new FXMLLoader(MainApplication.class.getResource("tarifas-view.fxml"));
+        Parent root = fxmlLoader.load();
+
+        MainController controller = fxmlLoader.getController();
+
+        Image imageTarifa1 = new Image("file:src/main/resources/images/mensual.png");
+        controller.setImageTarifa1(imageTarifa1);
+        Image imageTarifa3 = new Image("file:src/main/resources/images/trimestral.png");
+        controller.setImageTarifa3(imageTarifa3);
+        Image imageTarifa6 = new Image("file:src/main/resources/images/semestral.png");
+        controller.setImageTarifa6(imageTarifa6);
+        Image imageTarifa12 = new Image("file:src/main/resources/images/anual.png");
+        controller.setImageTarifa12(imageTarifa12);
 
         Scene scene = new Scene(root);
         stage.setScene(scene);

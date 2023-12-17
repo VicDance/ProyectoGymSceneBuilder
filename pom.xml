@@ -71,6 +71,13 @@
             <artifactId>jfoenix</artifactId>
             <version>8.0.1</version>
         </dependency>
+
+        <!--Lombok-->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.30</version>
+        </dependency>
     </dependencies>
 
     <build>

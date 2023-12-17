@@ -169,4 +169,14 @@ public class MainController {
         stage.show();
 
     }
+
+    @FXML
+    protected void changeToCartView() throws IOException {
+        Stage stage = new Stage();
+        FXMLLoader fxmlLoader = new FXMLLoader(MainApplication.class.getResource("cart-view.fxml"));
+
+        Scene scene = new Scene(fxmlLoader.load());
+        stage.setScene(scene);
+        stage.show();
+    }
 }

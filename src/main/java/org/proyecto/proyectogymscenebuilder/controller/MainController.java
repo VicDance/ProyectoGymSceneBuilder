@@ -80,6 +80,16 @@ public class MainController {
     }
 
     @FXML
+    protected void changeToLoginView() throws IOException {
+        Stage stage = new Stage();
+        FXMLLoader fxmlLoader = new FXMLLoader(MainApplication.class.getResource("login-view.fxml"));
+
+        Scene scene = new Scene(fxmlLoader.load());
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    @FXML
     protected void changeToProductDescription() throws IOException {
         Stage stage = new Stage();
         FXMLLoader fxmlLoader = new FXMLLoader(MainApplication.class.getResource("product-detail-view-2.fxml"));

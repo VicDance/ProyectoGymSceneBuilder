@@ -10,12 +10,7 @@
       <Button layoutX="338.0" layoutY="89.0" mnemonicParsing="false" prefHeight="105.0" prefWidth="203.0" text="Tarifas" />
       <Button fx:id="productsId" layoutX="51.0" layoutY="226.0" mnemonicParsing="false" onAction="#changeToProductsView" prefHeight="105.0" prefWidth="203.0" text="Productos" />
       <Button layoutX="338.0" layoutY="226.0" mnemonicParsing="false" prefHeight="105.0" prefWidth="203.0" text="Usuario" />
-
-      <!-- Agregamos ImageView para mostrar las imágenes -->
-      <ImageView fx:id="imageView" layoutX="150.0" layoutY="50.0" fitHeight="300.0" fitWidth="400.0" preserveRatio="true" />
-
-      <!-- Si necesitas otro ImageView, agrégalo aquí -->
-      <!-- <ImageView fx:id="imageViewInstalaciones" layoutX="150.0" layoutY="50.0" fitHeight="300.0" fitWidth="400.0" preserveRatio="true" /> -->
-
+      <Button fx:id="buttonUser" layoutX="338.0" layoutY="226.0" mnemonicParsing="false" onAction="#changeToLoginView" prefHeight="105.0" prefWidth="203.0" text="Usuario" />
+      <Label fx:id="labelUsername" layoutX="422.0" layoutY="14.0" prefHeight="18.0" prefWidth="156.0" />
    </children>
 </Pane>

@@ -15,6 +15,12 @@ public class MainController {
     @FXML
     private ImageView imageView;
     @FXML
+    private ImageView imageMancuernas;
+    @FXML
+    private ImageView imageBici;
+    @FXML
+    private ImageView imageMultiestacion;
+    @FXML
     private ImageView imageViewInstalacionPrincipal;
     @FXML
     private ImageView imageViewInstalacionCardio;
@@ -26,6 +32,15 @@ public class MainController {
 
     public void setImage(Image image) {
         imageView.setImage(image);
+    }
+    public void setImageMancuernas(Image image) {
+        imageMancuernas.setImage(image);
+    }
+    public void setImageBici(Image image) {
+        imageBici.setImage(image);
+    }
+    public void setImageMultiestacion(Image image) {
+        imageMultiestacion.setImage(image);
     }
     public void setImageImageViewInstalacionPrincipal(Image image) {
         imageViewInstalacionPrincipal.setImage(image);
@@ -52,6 +67,12 @@ public class MainController {
 
         Image image = new Image("file:src/main/resources/images/banco-gym.jpg");
         controller.setImage(image);
+        Image imageMancuernas = new Image("file:src/main/resources/images/mancuernas.png");
+        controller.setImageMancuernas(imageMancuernas);
+        Image imageBici = new Image("file:src/main/resources/images/bici.png");
+        controller.setImageBici(imageBici);
+        Image imageMultiestacion = new Image("file:src/main/resources/images/multiestacion.png");
+        controller.setImageMultiestacion(imageMultiestacion);
 
         Scene scene = new Scene(root);
         stage.setScene(scene);

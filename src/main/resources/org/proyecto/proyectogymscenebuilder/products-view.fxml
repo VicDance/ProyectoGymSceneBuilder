@@ -5,32 +5,32 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="523.0" prefWidth="646.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.proyecto.proyectogymscenebuilder.controller.MainController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="523.0" prefWidth="646.0" style="-fx-background-image: url('https://img.freepik.com/vector-gratis/fondo-hexagonal-oscuro-color-degradado_79603-1410.jpg');" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.proyecto.proyectogymscenebuilder.controller.MainController">
    <children>
-      <Label alignment="CENTER" layoutX="136.0" layoutY="238.0" prefHeight="30.0" prefWidth="103.0" text="Banco: 120€">
+      <Label alignment="CENTER" layoutX="136.0" layoutY="238.0" prefHeight="30.0" prefWidth="103.0" text="Banco: 120€" textFill="WHITE">
          <font>
             <Font name="System Bold" size="14.0" />
          </font></Label>
       <ImageView fx:id="imageView" fitHeight="116.0" fitWidth="123.0" layoutX="128.0" layoutY="106.0" onMouseClicked="#changeToProductDescription" pickOnBounds="true" preserveRatio="true" />
-      <Label alignment="CENTER" layoutX="386.0" layoutY="238.0" prefHeight="30.0" prefWidth="148.0" text="Mancuernas: 180€">
+      <Label alignment="CENTER" layoutX="386.0" layoutY="238.0" prefHeight="30.0" prefWidth="148.0" text="Mancuernas: 180€" textFill="WHITE">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
       <ImageView fx:id="imageMancuernas" fitHeight="116.0" fitWidth="123.0" layoutX="400.0" layoutY="106.0" onMouseClicked="#changeToProductDescription" pickOnBounds="true" preserveRatio="true" />
-      <Label alignment="CENTER" layoutX="115.0" layoutY="441.0" prefHeight="30.0" prefWidth="148.0" text="Multiestacion: 480€">
+      <Label alignment="CENTER" layoutX="115.0" layoutY="441.0" prefHeight="30.0" prefWidth="148.0" text="Multiestacion: 480€" textFill="WHITE">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
       <ImageView fx:id="imageMultiestacion" fitHeight="116.0" fitWidth="123.0" layoutX="129.0" layoutY="309.0" onMouseClicked="#changeToProductDescription" pickOnBounds="true" preserveRatio="true" />
-      <Label alignment="CENTER" layoutX="409.0" layoutY="441.0" prefHeight="30.0" prefWidth="103.0" text="Bici: 240€">
+      <Label alignment="CENTER" layoutX="409.0" layoutY="441.0" prefHeight="30.0" prefWidth="103.0" text="Bici: 240€" textFill="WHITE">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
       <ImageView fx:id="imageBici" fitHeight="116.0" fitWidth="123.0" layoutX="401.0" layoutY="309.0" onMouseClicked="#changeToProductDescription" pickOnBounds="true" preserveRatio="true" />
-      <Label alignment="CENTER" layoutX="218.0" layoutY="41.0" prefHeight="39.0" prefWidth="210.0" text="PRODUCTOS">
+      <Label alignment="CENTER" layoutX="218.0" layoutY="41.0" prefHeight="39.0" prefWidth="210.0" text="PRODUCTOS" textFill="WHITE">
          <font>
             <Font name="System Bold" size="17.0" />
          </font>

@@ -8,12 +8,14 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import org.proyecto.proyectogymscenebuilder.MainApplication;
+import org.proyecto.proyectogymscenebuilder.connection.DatabaseConnection;
 import org.proyecto.proyectogymscenebuilder.model.User;
 
 import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.sql.*;
 
 public class UserController {
     //TODO: hacer que cuando se inicie sesion aparezca el nombre en la pantalla principal
@@ -36,11 +38,8 @@ public class UserController {
     @FXML
     Label labelSuccessRegister;
 
-    URL url = new URL("http://localhost:8080");
-    HttpURLConnection con = null;
-
-    public UserController() throws MalformedURLException {
-    }
+    DatabaseConnection databaseConnection = new DatabaseConnection();
+    Connection connection = databaseConnection.getConnection();
 
     @FXML
     protected void login() {
@@ -61,19 +60,28 @@ public class UserController {
     }
 
     @FXML
-    protected void register() throws IOException {
+    protected void register() {
         if (!usernameRegisterTextField.getText().isEmpty() && !passwordRegisterTextField.getText().isEmpty() && !repeatPasswordTextField.getText().isEmpty()) {
             User user = new User();
             user.setUsername(usernameRegisterTextField.getText());
             user.setPassword(passwordRegisterTextField.getText());
-            //User.builder().username(usernameRegisterTextField.getText()).password(passwordRegisterTextField.getText()).build();
-            //createUser(user);
+            createUser(user);
             labelSuccessRegister.setText("Registro exitoso");
         }
     }
 
-    private void createUser(User user) throws IOException {
-        con = (HttpURLConnection) url.openConnection();
-        con.setRequestMethod("POST");
+    private User createUser(User user) {
+        String query = "insert into user (username, password) values (?, ?)";
+        try {
+            PreparedStatement preparedStmt = connection.prepareStatement(query);
+            preparedStmt.setString (1, user.getUsername());
+            preparedStmt.setString (2, user.getPassword());
+
+            preparedStmt.execute();
+            connection.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return user;
     }
 }

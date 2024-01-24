@@ -4,17 +4,18 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import org.proyecto.proyectogymscenebuilder.connection.DatabaseConnection;
 
 import java.io.IOException;
+import java.sql.Connection;
+import java.sql.SQLException;
 
 public class MainApplication extends Application {
 
-    //TODO: cambiar estilo de botones y ponerle imágenes
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(MainApplication.class.getResource("main-gym-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
-        //scene.getStylesheets().add(BootstrapFX.bootstrapFXStyleSheet());
         stage.setScene(scene);
         stage.show();
     }

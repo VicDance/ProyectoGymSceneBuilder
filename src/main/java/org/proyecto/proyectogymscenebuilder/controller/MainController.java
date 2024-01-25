@@ -38,6 +38,7 @@ public class MainController {
     private ImageView imageViewInstalacionVestuario;
 
 
+
     public void setImage(Image image) {
         imageView.setImage(image);
     }

@@ -8,13 +8,11 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import org.proyecto.proyectogymscenebuilder.MainApplication;
-import org.proyecto.proyectogymscenebuilder.connection.DatabaseConnection;
 import org.proyecto.proyectogymscenebuilder.model.User;
+import org.proyecto.proyectogymscenebuilder.repository.UserRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import java.io.IOException;
-import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
-import java.net.URL;
 import java.sql.*;
 
 public class UserController {
@@ -38,14 +36,16 @@ public class UserController {
     @FXML
     Label labelSuccessRegister;
 
-    DatabaseConnection databaseConnection = new DatabaseConnection();
-    Connection connection = databaseConnection.getConnection();
+    private final UserRepository userRepository = new UserRepository();
 
     @FXML
-    protected void login() {
-        if (usernameTextField.getText().equals("VicDance") && passwordTextField.getText().equals("admin")) {
-            Stage stage = (Stage) this.usernameTextField.getScene().getWindow();
-            stage.close();
+    protected void login() throws SQLException {
+        if (!usernameTextField.getText().isEmpty() && !passwordTextField.getText().isEmpty()) {
+            User user = userRepository.getUserByEmailAndPassword(usernameTextField.getText(), passwordTextField.getText());
+
+            if (user != null) {
+                System.out.println("logged");
+            }
         }
     }
 
@@ -65,23 +65,13 @@ public class UserController {
             User user = new User();
             user.setUsername(usernameRegisterTextField.getText());
             user.setPassword(passwordRegisterTextField.getText());
-            createUser(user);
+            try {
+                userRepository.createUser(user);
+            } catch (SQLException e) {
+                System.out.println("Hubo un problema creando el usuario");
+                e.printStackTrace();
+            }
             labelSuccessRegister.setText("Registro exitoso");
         }
-    }
-
-    private User createUser(User user) {
-        String query = "insert into user (username, password) values (?, ?)";
-        try {
-            PreparedStatement preparedStmt = connection.prepareStatement(query);
-            preparedStmt.setString (1, user.getUsername());
-            preparedStmt.setString (2, user.getPassword());
-
-            preparedStmt.execute();
-            connection.close();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        return user;
     }
 }

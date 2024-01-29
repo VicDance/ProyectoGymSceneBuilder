@@ -1,20 +1,19 @@
 package org.proyecto.proyectogymscenebuilder.model;
 
-/*import lombok.Builder;
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
-@Builder
+@Builder(toBuilder = true)
 @Getter
 @Setter
-@EqualsAndHashCode*/
+@EqualsAndHashCode
+@NoArgsConstructor
+@AllArgsConstructor
 public class User {
     private int userId;
     private String username;
     private String password;
 
-    public String getUsername() {
+    /*public String getUsername() {
         return username;
     }
 
@@ -28,5 +27,5 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
-    }
+    }*/
 }

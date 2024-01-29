@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="756.0" prefWidth="890.0" style="-fx-background-image: url('https://img.freepik.com/vector-gratis/fondo-hexagonal-oscuro-color-degradado_79603-1410.jpg');" styleClass="panel-primary" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.proyecto.proyectogymscenebuilder.controller.MainController">
+   <children>
+      <Label alignment="CENTER" layoutX="117.0" layoutY="43.0" prefHeight="25.0" prefWidth="149.0" text="TARIFA: 1 MES" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font></Label>
+      <ImageView fx:id="imageTarifa1" fitHeight="231.0" fitWidth="374.0" layoutX="109.0" layoutY="80.0" pickOnBounds="true" preserveRatio="true" />
+      <Button fx:id="añadirCestaId" layoutX="148.0" layoutY="321.0" mnemonicParsing="false" onMouseClicked="#changeToCartView" text="Añadir a la cesta" />
+      <Label alignment="CENTER" layoutX="602.0" layoutY="44.0" prefHeight="25.0" prefWidth="149.0" text="TARIFA: 3 MESES" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="imageTarifa3" fitHeight="231.0" fitWidth="380.0" layoutX="573.0" layoutY="80.0" pickOnBounds="true" preserveRatio="true" />
+      <Button fx:id="añadirCestaId1" layoutX="625.0" layoutY="321.0" mnemonicParsing="false" onMouseClicked="#changeToCartView" text="Añadir a la cesta" />
+      <Label alignment="CENTER" layoutX="121.0" layoutY="416.0" prefHeight="25.0" prefWidth="149.0" text="TARIFA: 6 MESES" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="imageTarifa6" fitHeight="223.0" fitWidth="374.0" layoutX="109.0" layoutY="457.0" pickOnBounds="true" preserveRatio="true" />
+      <Button fx:id="añadirCestaId2" layoutX="148.0" layoutY="693.0" mnemonicParsing="false" onMouseClicked="#changeToCartView" text="Añadir a la cesta" />
+      <Label alignment="CENTER" layoutX="608.0" layoutY="417.0" prefHeight="25.0" prefWidth="149.0" text="TARIFA: 12 MESES" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="imageTarifa12" fitHeight="231.0" fitWidth="380.0" layoutX="580.0" layoutY="453.0" pickOnBounds="true" preserveRatio="true" />
+      <Button fx:id="añadirCestaId11" layoutX="629.0" layoutY="694.0" mnemonicParsing="false" onMouseClicked="#changeToCartView" text="Añadir a la cesta" />
+   </children>
+</Pane>

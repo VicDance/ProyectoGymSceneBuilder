@@ -2,27 +2,20 @@ package org.proyecto.proyectogymscenebuilder;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.image.Image;
 import javafx.stage.Stage;
+import org.proyecto.proyectogymscenebuilder.connection.DatabaseConnection;
 
 import java.io.IOException;
+import java.sql.Connection;
+import java.sql.SQLException;
 
 public class MainApplication extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(MainApplication.class.getResource("main-products-view.fxml"));
-        Parent root = fxmlLoader.load();
-
-        MainController controller = fxmlLoader.getController();
-
-        Image image = new Image("file:src/main/resources/images/banco-gym.jpg");
-        controller.setImage(image);
-
-        Scene scene = new Scene(root);
-
+        FXMLLoader fxmlLoader = new FXMLLoader(MainApplication.class.getResource("main-gym-view.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
         stage.setScene(scene);
         stage.show();
     }

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Ellipse?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="502.0" prefWidth="461.0" style="-fx-background-image: url('https://img.freepik.com/vector-gratis/fondo-hexagonal-oscuro-color-degradado_79603-1410.jpg');" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.proyecto.proyectogymscenebuilder.controller.UserController">
+   <children>
+      <Ellipse fill="DODGERBLUE" layoutX="231.0" layoutY="115.0" radiusX="44.0" radiusY="29.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="DODGERBLUE" layoutX="231.0" layoutY="79.0" radius="29.0" stroke="BLACK" strokeType="INSIDE" />
+      <Label layoutX="97.0" layoutY="181.0" prefHeight="16.0" prefWidth="106.0" text="Usuario" textFill="WHITE" />
+      <Label layoutX="95.0" layoutY="248.0" prefHeight="16.0" prefWidth="106.0" text="Contraseña" textFill="WHITE" />
+      <TextField fx:id="usernameRegisterTextField" layoutX="95.0" layoutY="202.0" prefHeight="24.0" prefWidth="253.0" />
+      <PasswordField fx:id="passwordRegisterTextField" layoutX="95.0" layoutY="270.0" prefHeight="24.0" prefWidth="253.0" />
+      <Label layoutX="95.0" layoutY="318.0" prefHeight="16.0" prefWidth="144.0" text="Repetir contraseña" textFill="WHITE" />
+      <PasswordField fx:id="repeatPasswordTextField" layoutX="95.0" layoutY="340.0" prefHeight="24.0" prefWidth="253.0" />
+      <Button fx:id="buttonRegister" layoutX="175.0" layoutY="407.0" mnemonicParsing="false" onAction="#register" text="Registrarse" />
+      <Label fx:id="labelSuccessRegister" layoutX="137.0" layoutY="454.0" prefHeight="16.0" prefWidth="168.0" />
+   </children>
+</Pane>

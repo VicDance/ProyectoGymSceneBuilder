@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="920.0" prefWidth="1064.0" style="-fx-background-image: url('https://img.freepik.com/vector-gratis/fondo-hexagonal-oscuro-color-degradado_79603-1410.jpg');" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.proyecto.proyectogymscenebuilder.controller.MainController">
+   <children>
+      <Label alignment="CENTER" layoutX="206.0" layoutY="155.0" prefHeight="25.0" prefWidth="149.0" text="Sala principal" textFill="#e8e8e8">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font></Label>
+      <ImageView fx:id="imageViewInstalacionPrincipal" fitHeight="297.0" fitWidth="390.0" layoutX="84.0" layoutY="195.0" onMouseClicked="#changeToSalaPrincipal" pickOnBounds="true" preserveRatio="true" />
+      <Label alignment="CENTER" layoutX="694.0" layoutY="153.0" prefHeight="25.0" prefWidth="207.0" text="Sala de cardio y actividades" textFill="#e8e8e8">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="imageViewInstalacionCardio" fitHeight="297.0" fitWidth="390.0" layoutX="601.0" layoutY="195.0" onMouseClicked="#changeToSalaCardio" pickOnBounds="true" preserveRatio="true" />
+      <Label alignment="CENTER" layoutX="234.0" layoutY="531.0" prefHeight="17.0" prefWidth="94.0" text="Piscina" textFill="#e8e8e8">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="imageViewInstalacionPiscina" fitHeight="297.0" fitWidth="390.0" layoutX="84.0" layoutY="572.0" onMouseClicked="#changeToSalaPiscina" pickOnBounds="true" preserveRatio="true" />
+      <Label alignment="CENTER" layoutX="750.0" layoutY="529.0" prefHeight="17.0" prefWidth="94.0" text="Vestuarios" textFill="#e8e8e8">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="imageViewInstalacionVestuario" fitHeight="297.0" fitWidth="390.0" layoutX="600.0" layoutY="566.0" onMouseClicked="#changeToVestuario" pickOnBounds="true" preserveRatio="true" />
+      <Label alignment="CENTER" layoutX="387.0" layoutY="42.0" prefHeight="58.0" prefWidth="291.0" text="INSTALACIONES" textFill="#e8e8e8">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>

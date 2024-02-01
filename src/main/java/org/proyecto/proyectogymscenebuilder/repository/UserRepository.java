@@ -9,6 +9,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 public class UserRepository {
     //DatabaseConnection databaseConnection = new DatabaseConnection();
@@ -49,22 +50,24 @@ public class UserRepository {
         return getAllUsers().stream().filter(user -> user.getUserId() == id).findFirst().orElse(new User());
     }
 
-    public User getUserByEmailAndPassword(String username, String password) throws SQLException {
+    public Optional<User> getUserByEmailAndPassword(String username, String password) throws SQLException {
         Connection connection = null;
         PreparedStatement statement = null;
-        User user = null;
+        User user = User.builder().build();
         try {
             connection = DatabaseConnection.getConnection();
 
-            String query = "select * from user where username = ? and password = ?";
+            String query = "select username from user where username = ? and password = ?";
             statement = connection.prepareStatement(query);
             statement.setString(1, username);
             statement.setString(2, password);
 
             ResultSet resultSet = statement.executeQuery();
-            user = User.builder().build();
-            user.toBuilder().username(resultSet.getString(1));
-            user.toBuilder().password(resultSet.getString(2));
+            while(resultSet.next()){
+                String name = resultSet.getString("username");
+                user.setUsername(name);
+            }
+            //return Optional.of(user);
 
         } catch (SQLException e) {
             e.printStackTrace();
@@ -77,7 +80,7 @@ public class UserRepository {
                 connection.close();
             }
         }
-        return user;
+        return Optional.of(user);
     }
 
     public User createUser(User user) throws SQLException {

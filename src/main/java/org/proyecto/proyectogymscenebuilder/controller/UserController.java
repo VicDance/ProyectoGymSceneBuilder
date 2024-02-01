@@ -14,6 +14,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import java.io.IOException;
 import java.sql.*;
+import java.util.Optional;
 
 public class UserController {
     //TODO: hacer que cuando se inicie sesion aparezca el nombre en la pantalla principal
@@ -41,9 +42,9 @@ public class UserController {
     @FXML
     protected void login() throws SQLException {
         if (!usernameTextField.getText().isEmpty() && !passwordTextField.getText().isEmpty()) {
-            User user = userRepository.getUserByEmailAndPassword(usernameTextField.getText(), passwordTextField.getText());
+            Optional<User> user = userRepository.getUserByEmailAndPassword(usernameTextField.getText(), passwordTextField.getText());
 
-            if (user != null) {
+            if (user.isPresent()) {
                 System.out.println("logged");
             }
         }

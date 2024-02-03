@@ -28,6 +28,7 @@ public class UserRepository {
                 user.setUserId(resultSet.getInt(1));
                 user.setUsername(resultSet.getString(2));
                 user.setPassword(resultSet.getString(3));
+                user.setLast_access(resultSet.getDate(4));
                 users.add(user);
             }
         } catch (SQLException e) {

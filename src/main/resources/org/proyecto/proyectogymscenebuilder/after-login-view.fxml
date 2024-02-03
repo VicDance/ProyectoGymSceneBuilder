@@ -10,7 +10,7 @@
          <font>
             <Font size="14.0" />
          </font></Label>
-      <Label alignment="CENTER" layoutX="134.0" layoutY="183.0" prefHeight="16.0" prefWidth="106.0" text="PERFIL" textFill="WHITE">
+      <Label fx:id="labelProfile" alignment="CENTER" layoutX="134.0" layoutY="183.0" onMouseClicked="#accessProfile" prefHeight="16.0" prefWidth="106.0" text="PERFIL" textFill="WHITE">
          <font>
             <Font size="14.0" />
          </font></Label>

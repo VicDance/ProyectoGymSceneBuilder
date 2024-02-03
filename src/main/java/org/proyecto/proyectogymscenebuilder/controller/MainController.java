@@ -146,7 +146,12 @@ public class MainController {
     @FXML
     protected void changeToLoginView() throws IOException {
         Stage stage = new Stage();
-        FXMLLoader fxmlLoader = new FXMLLoader(MainApplication.class.getResource("after-login-view.fxml"));
+        FXMLLoader fxmlLoader;
+        if (UserController.logged){
+            fxmlLoader = new FXMLLoader(MainApplication.class.getResource("after-login-view.fxml"));
+        } else {
+            fxmlLoader = new FXMLLoader(MainApplication.class.getResource("login-view.fxml"));
+        }
 
         Scene scene = new Scene(fxmlLoader.load());
         stage.setScene(scene);

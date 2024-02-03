@@ -2,16 +2,23 @@ package org.proyecto.proyectogymscenebuilder.controller;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 import org.proyecto.proyectogymscenebuilder.MainApplication;
 
 import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
 
-public class MainController {
+import static org.proyecto.proyectogymscenebuilder.controller.UserController.logged;
+
+public class MainController implements Initializable {
     @FXML
     private ImageView imageView;
     @FXML
@@ -36,7 +43,17 @@ public class MainController {
     private ImageView imageViewInstalacionPiscina;
     @FXML
     private ImageView imageViewInstalacionVestuario;
+    @FXML
+    Label labelCesta;
+    @FXML
+    Button añadirCestaId;
 
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        /*if (!logged) {
+            añadirCestaId.setDisable(true);
+        }*/
+    }
 
 
     public void setImage(Image image) {
@@ -147,7 +164,7 @@ public class MainController {
     protected void changeToLoginView() throws IOException {
         Stage stage = new Stage();
         FXMLLoader fxmlLoader;
-        if (UserController.logged){
+        if (logged){
             fxmlLoader = new FXMLLoader(MainApplication.class.getResource("after-login-view.fxml"));
         } else {
             fxmlLoader = new FXMLLoader(MainApplication.class.getResource("login-view.fxml"));
@@ -171,7 +188,6 @@ public class MainController {
 
         Scene scene = new Scene(root);
         stage.setScene(scene);
-        //fxmlLoader.setController(CarritoController.class);
         stage.show();
 
     }
@@ -248,5 +264,10 @@ public class MainController {
         Scene scene = new Scene(fxmlLoader.load());
         stage.setScene(scene);
         stage.show();
+    }
+
+    @FXML
+    public void addToCart() {
+        labelCesta.setText("Añadido al carrito");
     }
 }

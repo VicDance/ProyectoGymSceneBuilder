@@ -18,18 +18,10 @@ public class CarritoController implements Initializable {
     @FXML
     Button añadirCestaId;
 
-    @FXML
-    Label labelCesta;
-
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         if (logged) {
             carritoUsername.setText(carritoUsername.getText() + " " + username);
         }
-    }
-
-    @FXML
-    public void addToCart() {
-        labelCesta.setText("Añadido al carrito");
     }
 }

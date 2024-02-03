@@ -3,10 +3,8 @@ package org.proyecto.proyectogymscenebuilder.repository;
 import org.proyecto.proyectogymscenebuilder.connection.DatabaseConnection;
 import org.proyecto.proyectogymscenebuilder.model.User;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
+import java.time.Instant;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -120,5 +118,31 @@ public class UserRepository {
             }
         }
         return null;
+    }
+
+    public void updateLastDate(int id, Date last_access) throws SQLException {
+        Connection connection = null;
+        PreparedStatement statement = null;
+
+        try {
+            connection = DatabaseConnection.getConnection();
+
+            String query = "update user set last_access = ?  where id = ?";
+            statement = connection.prepareStatement(query);
+            statement.setDate (1, last_access);
+            statement.setInt (2, id);
+
+            statement.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+            connection.rollback();
+        } finally {
+            if (null != statement) {
+                statement.close();
+            }
+            if (null != connection) {
+                connection.close();
+            }
+        }
     }
 }

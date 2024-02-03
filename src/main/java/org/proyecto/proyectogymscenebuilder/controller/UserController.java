@@ -10,8 +10,6 @@ import javafx.stage.Stage;
 import org.proyecto.proyectogymscenebuilder.MainApplication;
 import org.proyecto.proyectogymscenebuilder.model.User;
 import org.proyecto.proyectogymscenebuilder.repository.UserRepository;
-import org.springframework.beans.factory.annotation.Autowired;
-
 import java.io.IOException;
 import java.sql.*;
 import java.util.Optional;
@@ -39,12 +37,17 @@ public class UserController {
 
     private final UserRepository userRepository = new UserRepository();
 
+    public static boolean logged = false;
+    public static String username = "";
+
     @FXML
     protected void login() throws SQLException {
         if (!usernameTextField.getText().isEmpty() && !passwordTextField.getText().isEmpty()) {
             Optional<User> user = userRepository.getUserByEmailAndPassword(usernameTextField.getText(), passwordTextField.getText());
 
             if (user.isPresent()) {
+                logged = true;
+                username = user.get().getUsername();
                 System.out.println("logged");
             }
         }

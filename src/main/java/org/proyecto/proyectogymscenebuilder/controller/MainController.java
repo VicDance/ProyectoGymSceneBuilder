@@ -146,7 +146,7 @@ public class MainController {
     @FXML
     protected void changeToLoginView() throws IOException {
         Stage stage = new Stage();
-        FXMLLoader fxmlLoader = new FXMLLoader(MainApplication.class.getResource("login-view.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(MainApplication.class.getResource("after-login-view.fxml"));
 
         Scene scene = new Scene(fxmlLoader.load());
         stage.setScene(scene);
@@ -166,6 +166,7 @@ public class MainController {
 
         Scene scene = new Scene(root);
         stage.setScene(scene);
+        //fxmlLoader.setController(CarritoController.class);
         stage.show();
 
     }

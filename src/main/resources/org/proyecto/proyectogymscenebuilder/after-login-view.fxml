@@ -9,18 +9,22 @@
       <Label fx:id="labelAccessGym" alignment="CENTER" layoutX="134.0" layoutY="106.0" onMouseClicked="#accessGym" prefHeight="16.0" prefWidth="106.0" text="ENTRAR" textFill="WHITE">
          <font>
             <Font size="14.0" />
-         </font></Label>
+         </font>
+      </Label>
       <Label fx:id="labelProfile" alignment="CENTER" layoutX="134.0" layoutY="183.0" onMouseClicked="#accessProfile" prefHeight="16.0" prefWidth="106.0" text="PERFIL" textFill="WHITE">
          <font>
             <Font size="14.0" />
-         </font></Label>
-      <Label alignment="CENTER" layoutX="134.0" layoutY="265.0" prefHeight="17.0" prefWidth="106.0" text="CARRITO" textFill="WHITE">
+         </font>
+      </Label>
+      <Label fx:id="labelCart" alignment="CENTER" layoutX="134.0" layoutY="265.0" onMouseClicked="#accessCart" prefHeight="17.0" prefWidth="106.0" text="CARRITO" textFill="WHITE">
          <font>
             <Font size="14.0" />
-         </font></Label>
+         </font>
+      </Label>
       <Label fx:id="labelMessageAccessGym" alignment="CENTER" layoutX="56.0" layoutY="336.0" prefHeight="17.0" prefWidth="251.0" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font size="16.0" />
-         </font></Label>
+         </font>
+      </Label>
    </children>
 </Pane>

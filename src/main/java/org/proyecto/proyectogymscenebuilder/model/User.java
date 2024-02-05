@@ -15,4 +15,10 @@ public class User {
     private String username;
     private String password;
     private Date last_access;
+    private Date creation_date;
+    private int num_access;
+    private String additionalField;
+
+
+
 }

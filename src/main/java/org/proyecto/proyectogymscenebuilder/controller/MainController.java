@@ -47,6 +47,8 @@ public class MainController implements Initializable {
     Label labelCesta;
     @FXML
     Button añadirCestaId;
+    @FXML
+    static Button buttonUser;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {

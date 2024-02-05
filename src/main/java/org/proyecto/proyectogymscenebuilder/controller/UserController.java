@@ -19,6 +19,7 @@ import javafx.scene.control.Alert.AlertType;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.util.Duration;
+
 public class UserController {
     //TODO: hacer que cuando se inicie sesion aparezca el nombre en la pantalla principal
 
@@ -163,6 +164,14 @@ public class UserController {
 
                 userRepository.createUser(user);
                 System.out.println("Usuario creado correctamente");
+
+                // Mostrar un mensaje visual
+                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setTitle("Éxito");
+                alert.setHeaderText(null);
+                alert.setContentText("Usuario creado correctamente. ¡Bienvenido " + username +"!");
+
+                alert.showAndWait();
 
                 // Realizar commit manual
                 connection.commit();

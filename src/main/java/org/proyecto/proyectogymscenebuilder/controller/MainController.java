@@ -47,6 +47,8 @@ public class MainController implements Initializable {
     Label labelCesta;
     @FXML
     Button añadirCestaId;
+    @FXML
+    Button buttonUser;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -160,11 +162,15 @@ public class MainController implements Initializable {
         stage.show();
     }
 
+
+
+
     @FXML
     protected void changeToLoginView() throws IOException {
         Stage stage = new Stage();
         FXMLLoader fxmlLoader;
         if (logged){
+            buttonUser.setText("Menu");
             fxmlLoader = new FXMLLoader(MainApplication.class.getResource("after-login-view.fxml"));
         } else {
             fxmlLoader = new FXMLLoader(MainApplication.class.getResource("login-view.fxml"));
@@ -174,6 +180,11 @@ public class MainController implements Initializable {
         stage.setScene(scene);
         stage.show();
     }
+
+    public void setTextOnButton(String text) {
+        buttonUser.setText(text);
+    }
+
 
     @FXML
     protected void changeToProductDescription() throws IOException {

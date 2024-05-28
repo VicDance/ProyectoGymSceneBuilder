@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
 
-
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="546.0" prefWidth="929.0" style="-fx-background-image: url('https://navarra.okdiario.com/asset/thumbnail,992,558,center,center/media/navarra/images/2023/06/01/2023060116275671366.jpg');" styleClass="panel-primary" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.proyecto.proyectogymscenebuilder.controller.MainController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="546.0" prefWidth="929.0" style="-fx-background-image: url('https://navarra.okdiario.com/asset/thumbnail,992,558,center,center/media/navarra/images/2023/06/01/2023060116275671366.jpg');" styleClass="panel-primary" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.proyecto.proyectogymscenebuilder.controller.MainController">
    <children>
       <Button fx:id="instalacionesId" layoutX="51.0" layoutY="76.0" mnemonicParsing="false" onAction="#changeToInstalacionesView" prefHeight="46.0" prefWidth="175.0" text="Instalaciones" />
       <Button fx:id="tarifasId" layoutX="51.0" layoutY="199.0" mnemonicParsing="false" onAction="#changeToTarifasView" prefHeight="46.0" prefWidth="175.0" text="Tarifas" />
@@ -19,5 +16,6 @@
             <Image url="https://us.123rf.com/450wm/designofire/designofire1901/designofire190105472/126439250-icono-de-carrito-de-compras-vectorial.jpg?ver=6" />
          </image>
       </ImageView>
+      <Button fx:id="buttonAccessGym" layoutX="686.0" layoutY="449.0" mnemonicParsing="false" onAction="#activeCam" prefHeight="46.0" prefWidth="175.0" text="Acceder Gimnasio" />
    </children>
 </Pane>

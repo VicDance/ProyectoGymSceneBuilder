@@ -110,25 +110,10 @@ public class AccessGymController {
         stage.show();
     }
 
-
-
-
-
-
     @FXML
     public void accessProfile() throws IOException {
         Stage stage = new Stage();
         FXMLLoader fxmlLoader = new FXMLLoader(MainApplication.class.getResource("profile-view.fxml"));
-
-        Scene scene = new Scene(fxmlLoader.load());
-        stage.setScene(scene);
-        stage.show();
-    }
-
-    @FXML
-    public void accessCart() throws IOException {
-        Stage stage = new Stage();
-        FXMLLoader fxmlLoader = new FXMLLoader(MainApplication.class.getResource("cart-view.fxml"));
 
         Scene scene = new Scene(fxmlLoader.load());
         stage.setScene(scene);

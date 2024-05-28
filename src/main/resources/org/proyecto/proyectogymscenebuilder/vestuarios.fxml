@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="554.0" prefWidth="912.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.proyecto.proyectogymscenebuilder.controller.MainController">
+   <children>
+      <ImageView fx:id="imageViewInstalacionVestuario" fitHeight="289.0" fitWidth="370.0" layoutX="30.0" layoutY="162.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+         </image>
+      </ImageView>
+      <Label layoutX="433.0" layoutY="97.0" prefHeight="289.0" prefWidth="456.0" text="El vestuario del gimnasio es un santuario de relajación y comodidad. Con duchas rejuvenecedoras, saunas reconfortantes y todas las comodidades necesarias, ofrece un espacio acogedor para recuperarse después del entrenamiento. Cada detalle, desde los armarios espaciosos hasta los productos de aseo disponibles, se ha cuidado para brindar una experiencia de lujo y bienestar." textAlignment="JUSTIFY" wrapText="true">
+         <font>
+            <Font size="16.0" />
+         </font></Label>
+   </children>
+</Pane>

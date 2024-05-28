@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="554.0" prefWidth="912.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.proyecto.proyectogymscenebuilder.controller.MainController">
+   <children>
+      <ImageView fx:id="imageViewInstalacionPiscina" fitHeight="312.0" fitWidth="370.0" layoutX="30.0" layoutY="159.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+         </image>
+      </ImageView>
+      <Label layoutX="433.0" layoutY="60.0" prefHeight="352.0" prefWidth="456.0" text="La piscina es un oasis acuático en el gimnasio, amplia y acogedora. Con programas para todos los niveles, desde principiantes hasta nadadores avanzados, y monitores expertos que guían las sesiones, es un espacio donde la excelencia se encuentra con la diversión. Ofrece oportunidades para desarrollar habilidades y disfrutar del agua en un ambiente emocionante y enfocado en el progreso personal." textAlignment="JUSTIFY" wrapText="true">
+         <font>
+            <Font size="16.0" />
+         </font></Label>
+   </children>
+</Pane>

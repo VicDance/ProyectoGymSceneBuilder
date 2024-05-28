@@ -8,4 +8,6 @@ module org.proyecto.proyectogymscenebuilder {
 
     opens org.proyecto.proyectogymscenebuilder to javafx.fxml;
     exports org.proyecto.proyectogymscenebuilder;
+    exports org.proyecto.proyectogymscenebuilder.controller;
+    opens org.proyecto.proyectogymscenebuilder.controller to javafx.fxml;
 }

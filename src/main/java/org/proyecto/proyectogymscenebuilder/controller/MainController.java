@@ -162,9 +162,6 @@ public class MainController implements Initializable {
         stage.show();
     }
 
-
-
-
     @FXML
     protected void changeToLoginView() throws IOException {
         Stage stage = new Stage();

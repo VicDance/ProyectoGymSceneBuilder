@@ -3,9 +3,10 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.Pane?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="317.0" prefWidth="412.0" style="-fx-background-image: url('https://img.freepik.com/vector-gratis/fondo-hexagonal-oscuro-color-degradado_79603-1410.jpg');" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="317.0" prefWidth="412.0" style="-fx-background-image: url('https://img.freepik.com/vector-gratis/fondo-hexagonal-oscuro-color-degradado_79603-1410.jpg');" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.proyecto.proyectogymscenebuilder.controller.CarritoController">
    <children>
-      <Label layoutX="33.0" layoutY="33.0" prefHeight="16.0" prefWidth="173.0" text="Carrito" textFill="WHITE" />
-      <Label layoutX="139.0" layoutY="130.0" text="Tu carrito esta vacio" textFill="WHITE" />
+      <Label layoutX="33.0" layoutY="14.0" prefHeight="16.0" prefWidth="173.0" text="Carrito" textFill="WHITE" />
+      <Label layoutX="139.0" layoutY="130.0" text="Tu carrito está vacío" textFill="WHITE" />
+      <Label fx:id="carritoUsername" layoutX="218.0" layoutY="14.0" prefHeight="16.0" prefWidth="173.0" text="Welcome! " textAlignment="CENTER" textFill="WHITE" />
    </children>
 </Pane>

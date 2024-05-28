@@ -12,7 +12,7 @@
          </image>
       </ImageView>
       <Label layoutX="264.0" layoutY="76.0" prefHeight="66.0" prefWidth="186.0" text="Descripcion de la imagen" />
-      <Button fx:id="añadirCestaId" layoutX="264.0" layoutY="188.0" mnemonicParsing="false" text="Añadir a la cesta" />
+      <Button fx:id="añadirCestaId" layoutX="264.0" layoutY="188.0" mnemonicParsing="false" onAction="#addToCart" text="Añadir a la cesta" />
       <Label fx:id="labelCesta" layoutX="253.0" layoutY="313.0" prefHeight="16.0" prefWidth="115.0" />
    </children>
 </Pane>

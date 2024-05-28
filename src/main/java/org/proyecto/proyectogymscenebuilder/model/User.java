@@ -1,32 +1,24 @@
 package org.proyecto.proyectogymscenebuilder.model;
 
-/*import lombok.Builder;
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
-@Builder
+import java.util.Date;
+
+@Builder(toBuilder = true)
 @Getter
 @Setter
-@EqualsAndHashCode*/
+@EqualsAndHashCode
+@NoArgsConstructor
+@AllArgsConstructor
 public class User {
     private int userId;
     private String username;
     private String password;
+    private Date last_access;
+    private Date creation_date;
+    private int num_access;
+    private String additionalField;
 
-    public String getUsername() {
-        return username;
-    }
 
-    public void setUsername(String username) {
-        this.username = username;
-    }
 
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
 }

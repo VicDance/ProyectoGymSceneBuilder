@@ -9,6 +9,11 @@ module org.proyecto.proyectogymscenebuilder {
     requires org.kordamp.ikonli.javafx;
     requires mysql.connector.j;
     requires spring.beans;
+    requires com.google.zxing;
+    requires com.google.zxing.javase;
+    requires java.desktop;
+    requires webcam.capture;
+    requires javafx.swing;
 
     opens org.proyecto.proyectogymscenebuilder to javafx.fxml;
     exports org.proyecto.proyectogymscenebuilder;

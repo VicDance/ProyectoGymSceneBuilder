@@ -10,10 +10,14 @@ import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
+import javafx.stage.Window;
 import org.proyecto.proyectogymscenebuilder.MainApplication;
+import org.proyecto.proyectogymscenebuilder.qr.QRReader;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.List;
+import java.util.Objects;
 import java.util.ResourceBundle;
 
 import static org.proyecto.proyectogymscenebuilder.controller.UserController.logged;
@@ -49,6 +53,8 @@ public class MainController implements Initializable {
     Button añadirCestaId;
     @FXML
     Button buttonUser;
+
+    private QRReader qrReader;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -277,5 +283,19 @@ public class MainController implements Initializable {
     @FXML
     public void addToCart() {
         labelCesta.setText("Añadido al carrito");
+    }
+
+    @FXML
+    public void activeCam() {
+        qrReader = new QRReader();
+
+        Stage stage = new Stage();
+        stage.setTitle("Coloque el código frente a la camara");
+        stage.setScene(qrReader.makeUI());
+        stage.setHeight(500);
+        stage.setWidth(600);
+        stage.show();
+
+        qrReader.startCameraInput();
     }
 }
